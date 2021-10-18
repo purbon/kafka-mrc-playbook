@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "replicas": [
+        {
+            "count": 2,
+            "constraints": {
+                "rack": "north"
+            }
+        }
+    ],
+    "observers": [
+        {
+        "count": 2,
+            "constraints": {
+                "rack": "south"
+            }
+        }
+    ]
+}
