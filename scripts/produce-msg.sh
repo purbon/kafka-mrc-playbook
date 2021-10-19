@@ -27,3 +27,15 @@ docker-compose exec broker-south-3 kafka-producer-perf-test --topic multi-region
         bootstrap.servers=broker-south-3:19093,broker-north-1:19091 \
         compression.type=none \
         batch.size=8196
+
+echo -e "\n\n==> Produce: Multi-region aSync Replication (topic: multi-region-async-op-leader-is-observer) \n"
+
+docker-compose exec broker-south-3 kafka-producer-perf-test --topic multi-region-async-op-leader-is-observer \
+      --num-records 200 \
+      --record-size 5000 \
+      --throughput -1 \
+      --producer-props \
+            acks=all \
+            bootstrap.servers=broker-south-3:19093,broker-north-1:19091 \
+            compression.type=none \
+            batch.size=8196
