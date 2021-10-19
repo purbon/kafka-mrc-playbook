@@ -18,12 +18,12 @@ docker-compose exec broker-north-1 kafka-producer-perf-test --topic multi-region
 echo -e "\n\n==> Produce: Multi-region aSync Replication (topic: multi-region-async) \n"
 
 
-docker-compose exec broker-north-1 kafka-producer-perf-test --topic multi-region-async \
+docker-compose exec broker-south-3 kafka-producer-perf-test --topic multi-region-async \
     --num-records 200 \
     --record-size 5000 \
     --throughput -1 \
     --producer-props \
         acks=all \
-        bootstrap.servers=broker-north-1:19091,broker-south-3:19093 \
+        bootstrap.servers=broker-south-3:19093,broker-north-1:19091 \
         compression.type=none \
         batch.size=8196

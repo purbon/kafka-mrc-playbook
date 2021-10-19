@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "partitions": [
+    {"topic": "multi-region-async-op-leader-is-observer", "partition": 0},
+    {"topic": "multi-region-async-op-leader-is-observer", "partition": 1}
+  ]
+}

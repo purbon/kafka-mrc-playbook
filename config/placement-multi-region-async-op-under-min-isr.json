@@ -4,7 +4,7 @@
         {
             "count": 2,
             "constraints": {
-                "rack": "west"
+                "rack": "north"
             }
         }
     ],
@@ -12,7 +12,7 @@
         {
             "count": 2,
             "constraints": {
-                "rack": "east"
+                "rack": "south"
             }
         }
     ],

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TOPICS=( single-region multi-region-sync multi-region-async)
+TOPICS=( single-region multi-region-sync multi-region-async multi-region-async-op-leader-is-observer )
 for topic in ${TOPICS[@]}
 do
  echo -e "\n==> Describe topic: $topic\n"

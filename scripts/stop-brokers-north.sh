@@ -17,4 +17,4 @@ docker run --rm -d \
        --name pumba-pause-north-brokers \
        -v /var/run/docker.sock:/var/run/docker.sock \
        gaiaadm/pumba:0.7.8  \
-                pause --duration 5m broker-north-2  &
+                pause --duration 15m  broker-north-1 broker-north-2  &
