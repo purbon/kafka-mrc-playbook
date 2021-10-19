@@ -15,6 +15,7 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_SERVERS: zookeeper-north:2888:3888;zookeeper-central:2888:3888;zookeeper-south:2888:3888
+      KAFKA_OPTS: -Dzookeeper.4lw.commands.whitelist=*
 
   zookeeper-central:
     image: confluentinc/cp-zookeeper:${TAG}
@@ -31,6 +32,8 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2182
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_SERVERS: zookeeper-north:2888:3888;zookeeper-central:2888:3888;zookeeper-south:2888:3888
+      KAFKA_OPTS: -Dzookeeper.4lw.commands.whitelist=*
+
 
   zookeeper-south:
     image: confluentinc/cp-zookeeper:${TAG}
@@ -48,6 +51,7 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2183
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_SERVERS: zookeeper-north:2888:3888;zookeeper-central:2888:3888;zookeeper-south:2888:3888
+      KAFKA_OPTS: -Dzookeeper.4lw.commands.whitelist=*
 
   broker-north-1:
     image: confluentinc/cp-server:${TAG}
@@ -197,6 +201,7 @@ services:
       ZOOKEEPER_CLIENT_PORT: 2188
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_SERVERS: zookeeper-ccc:2888:3888
+      KAFKA_OPTS: -Dzookeeper.4lw.commands.whitelist=*  
 
 
   broker-ccc:
